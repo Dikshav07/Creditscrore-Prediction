@@ -2,8 +2,11 @@ from flask import Flask, request, jsonify
 import pickle
 import pandas as pd
 import numpy as np
+from flask_cors import CORS
+
 
 app = Flask(__name__)
+CORS(app)  
 
 # Load the trained ML model and scaler
 with open("model.pkl", "rb") as model_file:
