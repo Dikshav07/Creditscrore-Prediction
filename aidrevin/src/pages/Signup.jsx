@@ -61,26 +61,7 @@ function Signup() {
             <label>Email</label>
             <input type="email" placeholder="Enter your email" value={email} onChange={(e) => setEmail(e.target.value)} required />
           </div>
-          {/* <div className="input-group">
-            <label>Monthly Income</label>
-            <input type="number" placeholder="Enter your monthly income" value={monthlyIncome} onChange={(e) => setMonthlyIncome(e.target.value)} required />
-          </div> */}
-          {/* <div className="input-group">
-            <label>Monthly Expenses</label>
-            <input type="number" placeholder="Enter your monthly expenses" value={monthlyExpenses} onChange={(e) => setMonthlyExpenses(e.target.value)} required />
-          </div>
-          <div className="input-group">
-            <label>Current Credit Score</label>
-            <input type="number" placeholder="Enter your credit score" value={creditScore} onChange={(e) => setCreditScore(e.target.value)} required />
-          </div>
-          <div className="input-group">
-            <label>Credit Card Balance</label>
-            <input type="number" placeholder="Enter your credit card balance" value={creditCardBalance} onChange={(e) => setCreditCardBalance(e.target.value)} required />
-          </div>
-          <div className="input-group">
-            <label>Loan Balance</label>
-            <input type="number" placeholder="Enter your loan balance" value={loanBalance} onChange={(e) => setLoanBalance(e.target.value)} required />
-          </div> */}
+          
           {/* Password Field */}
           <div className="input-group">
             <label>Password</label>

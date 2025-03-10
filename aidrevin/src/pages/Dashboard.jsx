@@ -1,5 +1,5 @@
 // src/pages/Dashboard.jsx
-import React from "react";
+import React, { useState } from "react";
 import "./Dashboard.css";
 
 import Profile from "./dashboard/Profile";
@@ -10,14 +10,14 @@ import FAQ from "./dashboard/FAQ";
 import PersonalizedTips from "./dashboard/PersonalizedTips";
 
 function Dashboard() {
+  const [predictionData, setPredictionData] = useState(null);
   return (
     <div className="dashboard-page">
       <h1>Welcome to Your Dashboard</h1>
-      <Profile />
+      <Profile predictionData={predictionData} />
       <ProgressTracking />
       <Notifications />
-      <CreditScoreForm />
-      <PersonalizedTips />
+      <CreditScoreForm setPredictionData={setPredictionData} />      <PersonalizedTips />
       <FAQ />
     </div>
   );

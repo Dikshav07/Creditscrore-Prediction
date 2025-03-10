@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { getCreditScorePrediction } from "../../api/ml"; // Use API function
+import { getCreditScorePrediction } from "../../api/ml";
 import "./CreditScoreForm.css";
 
-const CreditScoreForm = () => {
+const CreditScoreForm = ({ setPredictionData }) => {
   const [formData, setFormData] = useState({
     monthly_income: "",
     monthly_expenses: "",
@@ -12,8 +12,7 @@ const CreditScoreForm = () => {
     late_payments: "",
   });
 
-  const [predictionData, setPredictionData] = useState(null);
-  const [error, setError] = useState(null); // State for error messages
+  const [error, setError] = useState(null);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -43,13 +42,13 @@ const CreditScoreForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError(null); // Clear previous errors
+    setError(null);
 
     const computedData = calculateDerivedValues(formData);
     try {
-      const res = await getCreditScorePrediction(computedData); // ✅ Using API function
+      const res = await getCreditScorePrediction(computedData);
       console.log("Prediction Data:", res);
-      setPredictionData(res);
+      setPredictionData(res); 
     } catch (err) {
       console.error("Error fetching prediction:", err);
       setError(err || "Something went wrong");
@@ -74,30 +73,7 @@ const CreditScoreForm = () => {
         ))}
         <button type="submit">Predict</button>
       </form>
-      {error && <p className="error-message">{error}</p>} {/* Display Errors */}
-      {predictionData && (
-        <div className="prediction-results">
-          <h3>Prediction Results</h3>
-          <p>
-            <strong>Current Credit Score:</strong>{" "}
-            {predictionData.current_credit_score}
-          </p>
-          <p>
-            <strong>Best Improvement Action:</strong>{" "}
-            {predictionData.best_improvement_action || "No improvement needed"}
-          </p>
-          <p>
-            <strong>New Predicted Score:</strong>{" "}
-            {predictionData.new_predicted_score}
-          </p>
-          <h4>Personalized Tips:</h4>
-          <ul>
-            {predictionData.personalized_tips.map((tip, index) => (
-              <li key={index}>{tip}</li>
-            ))}
-          </ul>
-        </div>
-      )}
+      {error && <p className="error-message">{error}</p>}
     </div>
   );
 };
