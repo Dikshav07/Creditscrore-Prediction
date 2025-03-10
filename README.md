@@ -7,7 +7,7 @@
 - Frontend: React.js
 - Backend: Django 
 - Database: MongoDB 
-- AI/ML: Python, Scikit-learn, TensorFlow
+- AI/ML: Python, Scikit-learn
 
 
 # 🚀 Future Scope:
