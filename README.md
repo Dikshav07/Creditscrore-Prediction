@@ -1,6 +1,6 @@
 # Accuracy Metrics:
 
-- Model Accuracy: (e.g., 85%)
+- Model Accuracy: 85%
 - R2 score = 0.99
 
 # Techstack used
