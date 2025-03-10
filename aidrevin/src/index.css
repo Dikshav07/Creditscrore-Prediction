@@ -1,0 +1,39 @@
+/* src/index.css */
+
+/* (Optional) Google Font import */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+:root {
+  /* Adjust these to get the exact green/light-blue shades you want */
+  --primary-color: #0F8666;    /* A deeper green-teal */
+  --secondary-color: #1EB2A6;  /* A lighter teal/blue */
+  --accent-color: #54C8F2;     /* Light blue accent */
+  --light-bg: #ffffff;         /* White */
+  --dark-text: #333333;        /* Dark gray text */
+  --transition-speed: 0.3s;
+}
+
+/* Global reset & typography */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: var(--light-bg);
+  color: var(--dark-text);
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}

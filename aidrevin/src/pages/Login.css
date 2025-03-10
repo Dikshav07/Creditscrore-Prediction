@@ -1,0 +1,133 @@
+/* src/pages/Login.css (example) */
+
+/* Outer container to center the form vertically */
+.login_page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh; /* Adjust as needed */
+  background-color: var(--light-bg, #f9f9f9); /* or any background color */
+}
+
+/* The form "card" */
+.form-container {
+  background: #fff; /* White background for a card-like effect */
+  border-radius: 8px;
+  padding: 2rem;
+  padding-right: 30px;
+  max-width: 400px; /* Fixed width for the card */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Center headings, etc. */
+}
+
+/* Title styling */
+.title {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: var(--primary-color, #0F8666); /* Example: teal/green */
+}
+
+/* The form itself */
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+/* Group label + input together */
+.input-group {
+  margin-bottom: 1rem;
+  text-align: left; /* Label & input alignment */
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Forgot Password link alignment */
+.forgot {
+  text-align: right;
+  margin-bottom: 1rem;
+}
+
+.forgot a {
+  color: var(--primary-color, #0F8666);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+/* Sign In button */
+.sign {
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--primary-color, #0F8666);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Horizontal “or” lines with text in the middle */
+.social-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5rem 0;
+  color: #666;
+}
+
+.social-message .line {
+  flex: 1;
+  height: 1px;
+  background: #ccc;
+}
+
+.social-message .message {
+  margin: 0 0.75rem;
+  font-size: 0.9rem;
+}
+
+/* Social icons row */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Icon buttons */
+.icon {
+  background: #f1f1f1;
+  border: none;
+  border-radius: 50%;
+  padding: 0.6rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.icon:hover {
+  background: #e6e6e6;
+}
+
+/* Signup link at the bottom */
+.signup {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.signup a {
+  color: var(--primary-color, #0F8666);
+  text-decoration: none;
+  font-weight: 500;
+}

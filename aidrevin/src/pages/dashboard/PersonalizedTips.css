@@ -1,0 +1,28 @@
+.personalized-tips-section {
+  display: flex;
+  flex-direction: column;
+  gap: -5rem; /* Adds a controlled spacing instead of excessive gap */
+}
+
+.personalized-tips-section h2 {
+  color: var(--secondary-color);
+  margin-bottom: -35px; /* Reduce the space below the heading */
+  text-align: center; /* Ensure it's centered */
+}
+
+.personalized-tips-section ul {
+  list-style: disc;
+  margin-left: 1.5rem;
+  gap: 2px;
+  margin-bottom: 2px;
+  padding: 0; /* Remove any unwanted padding */
+}
+
+.personalized-tips-section li {
+  margin-bottom: 0.5rem;
+}
+
+.tips-footer {
+  font-size: 0.95rem;
+  color: #666;
+}

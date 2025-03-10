@@ -1,0 +1,124 @@
+/* src/pages/Contact.css */
+
+/* Pastel pink/purple gradient + radial highlights */
+.contact-page {
+  min-height: 80vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f3c9d2 0%, #a2c5ee 100%);
+}
+
+.contact-page::before,
+.contact-page::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.contact-page::before {
+  top: 20%;
+  left: 80%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 60%);
+  filter: blur(80px);
+}
+
+.contact-page::after {
+  bottom: 10%;
+  right: 10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 60%);
+  filter: blur(100px);
+}
+
+/* Ensure children appear above radial highlights */
+.contact-page > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Title (e.g., "Contact Us") */
+.contact-page h1 {
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #333;
+  text-shadow: 0 0 5px rgba(0,255,200,0.3); /* subtle neon glow */
+}
+
+/* Neon glass form container */
+.contact-form {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(8px);
+  border: 2px solid rgba(0,255,200,0.3);
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 0 15px rgba(0,255,200,0.2);
+  transition: box-shadow 0.3s;
+}
+
+.contact-form:hover {
+  box-shadow: 0 0 30px rgba(0,255,200,0.3);
+}
+
+/* Labels and inputs */
+.contact-form label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 0.3rem;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  margin-left: -5px;
+  font-size: 1rem;
+  color: #333;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+}
+
+/* Round neon button for "Send" */
+.contact-form button {
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.2rem;
+  background: #00ffc8;
+  color: #fff;
+  border: none;
+  border-radius: 999px; /* fully round */
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: box-shadow 0.3s, background 0.3s;
+}
+
+.contact-form button:hover {
+  background: #00eab5; 
+  box-shadow: 0 0 10px #00ffc8;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .contact-page {
+    padding: 1rem;
+  }
+  .contact-form {
+    padding: 1.5rem;
+    width: 90%;
+  }
+}

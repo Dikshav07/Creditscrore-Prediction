@@ -1,0 +1,36 @@
+/* CollapsibleSection.css */
+.collapsible-section {
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Ensures content is hidden when collapsed */
+    transition: all 0.3s ease;
+  }
+  
+  .collapsible-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--secondary-color);
+    color: var(--light-bg);
+    padding: 1rem;
+    cursor: pointer;
+  }
+  
+  .collapsible-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  
+  .collapsible-content {
+    overflow: hidden; 
+    transition: max-height 0.3s ease;
+    padding: 0 1rem;
+  }
+  
+  /* Optional: Add spacing for the actual content */
+  .collapsible-content > * {
+    margin: 1rem 0;
+  }
+  

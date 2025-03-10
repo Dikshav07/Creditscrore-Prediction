@@ -1,0 +1,133 @@
+/* src/pages/Services.css */
+
+/* 
+  Page container with a pastel gradient background + radial highlight shapes 
+  using pseudo-elements. 
+*/
+.services-page {
+  min-height: 80vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  /* Pastel teal gradient */
+  background: linear-gradient(135deg, #a7f3d0 0%, #cffafe 100%);
+}
+
+/* Light radial "glow" overlays */
+.services-page::before,
+.services-page::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.services-page::before {
+  top: 0%;
+  left: 30%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 60%);
+  filter: blur(80px);
+}
+
+.services-page::after {
+  bottom: 0%;
+  right: 20%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 60%);
+  filter: blur(100px);
+}
+
+/* Ensure children appear above the radial highlights */
+.services-page > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Page title (e.g., "Our Services") */
+.services-page h1 {
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #333;
+  text-shadow: 0 0 5px rgba(0,255,200,0.3); /* subtle neon glow */
+}
+
+/* Container for service items */
+.services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+/* Glass morph + neon accent cards */
+.service-card {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  border: 2px solid rgba(0,255,200,0.3); /* partial neon border */
+  border-radius: 20px;
+  width: 280px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 10px rgba(0,255,200,0.1);
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0,255,200,0.4); /* stronger neon glow */
+}
+
+/* Title inside card */
+.service-card h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  color: #333;
+  text-shadow: 0 0 3px rgba(0,255,200,0.3);
+}
+
+/* Description text */
+.service-card p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+/* Example round button (if used in your JSX) */
+.service-card button {
+  background-color: #00ffc8;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: box-shadow 0.3s, background-color 0.3s;
+}
+
+.service-card button:hover {
+  background-color: #00eab5;
+  box-shadow: 0 0 10px #00ffc8;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .services-page {
+    padding: 1rem;
+  }
+  .services-grid {
+    gap: 1rem;
+  }
+  .service-card {
+    width: 90%;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,30 @@
+/* src/pages/dashboard/Profile.css */
+.profile-section form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+  }
+  
+  .profile-section form label {
+    margin-top: 1rem;
+    font-weight: 500;
+  }
+  
+  .profile-section form input {
+    padding: 0.5rem;
+    margin-top: 0.3rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .profile-section form button {
+    margin-top: 1.5rem;
+    padding: 0.6rem;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  

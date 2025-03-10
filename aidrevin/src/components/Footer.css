@@ -1,0 +1,9 @@
+/* src/components/Footer.css */
+.footer {
+    background-color: var(--primary-color);
+    color: var(--light-bg);
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+  }
+  

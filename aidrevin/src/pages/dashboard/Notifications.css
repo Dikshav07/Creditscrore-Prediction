@@ -1,0 +1,15 @@
+/* src/pages/dashboard/Notifications.css */
+.notifications-list {
+    list-style: none;
+    margin-top: 1rem;
+    padding: 0;
+  }
+  
+  .notification-item {
+    background-color: #fff;
+    margin-bottom: 0.5rem;
+    padding: 0.8rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  

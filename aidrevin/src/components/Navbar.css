@@ -1,0 +1,65 @@
+/* src/components/Navbar.css */
+.navbar {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  gap: 1rem;
+}
+
+.navbar__left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Hamburger icon (always visible) */
+.navbar__toggle {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Logo text */
+.navbar__logo a {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Middle: Nav links (Home, Services, Contact) */
+.navbar__links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.navbar__links a {
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar__links a:hover {
+  color: var(--accent-color);
+}
+
+/* Right: Auth links (Login, Signup) */
+.navbar__auth {
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar__auth a {
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar__auth a:hover {
+  color: var(--accent-color);
+}

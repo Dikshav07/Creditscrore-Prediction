@@ -1,0 +1,45 @@
+/* src/components/Sidebar.css */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px; /* hidden by default */
+  width: 250px;
+  height: 100vh;
+  background-color: var(--secondary-color);
+  color: #fff;
+  padding: 1rem;
+  transition: left 0.3s ease;
+  z-index: 999; /* on top of main content */
+  box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+}
+
+.sidebar.open {
+  left: 0; /* slides in */
+}
+
+.sidebar__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.sidebar__links a {
+  display: block;
+  margin-bottom: 1rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.sidebar__links a:hover {
+  color: var(--accent-color);
+}

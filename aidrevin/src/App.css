@@ -1,0 +1,17 @@
+/* src/App.css */
+
+/* Container that holds navbar, sidebar, main content, and footer */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Main content should push footer to the bottom */
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  transition: margin-left var(--transition-speed);
+}
+
+/* If the sidebar is open, main content slides to the right (we'll handle the toggling in JS) */
