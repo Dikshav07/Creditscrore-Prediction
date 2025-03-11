@@ -1,6 +1,8 @@
 // src/App.jsx
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { ToastContainer } from "react-toastify"; // ✅ Import ToastContainer
+import "react-toastify/dist/ReactToastify.css"; // ✅ Import toast styles
 
 // Pages
 import Home from "./pages/Home";
@@ -48,6 +50,7 @@ function App() {
 
         {/* Footer at the bottom */}
         <Footer />
+        <ToastContainer />
       </div>
     </Router>
   );

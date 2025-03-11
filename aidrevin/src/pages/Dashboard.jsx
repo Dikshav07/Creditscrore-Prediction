@@ -4,7 +4,7 @@ import "./Dashboard.css";
 
 import Profile from "./dashboard/Profile";
 import ProgressTracking from "./dashboard/ProgressTracking";
-import Notifications from "./dashboard/Notifications";
+
 import CreditScoreForm from "./dashboard/CreditScoreForm";
 import FAQ from "./dashboard/FAQ";
 import PersonalizedTips from "./dashboard/PersonalizedTips";
@@ -16,7 +16,7 @@ function Dashboard() {
       <h1>Welcome to Your Dashboard</h1>
       <Profile predictionData={predictionData} />
       <ProgressTracking />
-      <Notifications />
+      
       <CreditScoreForm setPredictionData={setPredictionData} />      <PersonalizedTips />
       <FAQ />
     </div>

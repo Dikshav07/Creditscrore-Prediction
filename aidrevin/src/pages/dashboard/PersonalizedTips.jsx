@@ -1,21 +1,22 @@
 import React from "react";
-import "./PersonalizedTips.css";
+import "./Notifications.css";
 
-function PersonalizedTips({ tips }) {
-  const defaultTips = [
-    "Reduce your credit card balance to lower utilization.",
-    "Make on-time payments to improve your payment history.",
-    "Lower your debt-to-income ratio by paying off some debt."
+function PersonalizedTips() {
+  const notifications = [
+    { id: 1, message: "Your credit score increased by 5 points!" },
+    { id: 2, message: "Payment due for Credit Card ending 1234 on 10th." },
+    { id: 3, message: "You are close to achieving your monthly savings goal." },
   ];
 
   return (
-    <section id="personalized-tips" className="dashboard-section personalized-tips-section">
-      <h2>Personalized Tips</h2>
-      <p>Here are some tailored suggestions to help you improve your credit score:</p>
-      <ul>
-        {tips && tips.length > 0
-          ? tips.map((tip, index) => <li key={index}>{tip}</li>)
-          : defaultTips.map((tip, index) => <li key={index}>{tip}</li>)}
+    <section id="notifications" className="dashboard-section notifications-section">
+      <h2>Notifications</h2>
+      <ul className="notifications-list">
+        {notifications.map((notif) => (
+          <li key={notif.id} className="notification-item">
+            {notif.message}
+          </li>
+        ))}
       </ul>
     </section>
   );

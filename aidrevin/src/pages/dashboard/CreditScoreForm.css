@@ -6,6 +6,7 @@
   display: block;
   border-radius: 10px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  background: radial-gradient(circle, rgba(252, 208, 215, 1) 30%, rgba(255, 255, 255, 1) 100%);
   text-align: center; /* Center everything inside */
 }
 

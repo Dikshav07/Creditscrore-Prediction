@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { getCreditScorePrediction } from "../../api/ml";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css"; // ✅ Import toast styles
 import "./CreditScoreForm.css";
 
 const CreditScoreForm = ({ setPredictionData }) => {
@@ -48,10 +50,32 @@ const CreditScoreForm = ({ setPredictionData }) => {
     try {
       const res = await getCreditScorePrediction(computedData);
       console.log("Prediction Data:", res);
-      setPredictionData(res); 
+
+      setPredictionData({
+        ...res,
+        best_improvement_action: res?.best_improvement_action || "No improvement needed",
+        personalized_tips: res?.personalized_tips || ["No personalized tips available"],
+      });
+
+      // ✅ Success toast
+      toast.success("🎉 Credit Score Predicted Successfully!", {
+        position: "top-right",
+        autoClose: 3000, // Close after 3 seconds
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
     } catch (err) {
       console.error("Error fetching prediction:", err);
       setError(err || "Something went wrong");
+
+      // ❌ Error toast
+      toast.error("⚠ Failed to fetch prediction. Please try again.", {
+        position: "top-right",
+        autoClose: 3000,
+      });
     }
   };
 

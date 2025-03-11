@@ -23,10 +23,27 @@ function Profile({ predictionData }) {
         <label>Potential Credit Score</label>
         <input 
           type="number" 
-          value={predictionData?.new_predicted_score + 23 || "N/A"} 
+          value={(predictionData?.new_predicted_score || 0) + 23} 
           readOnly 
         />
 
+        <label>Best Improvement Action</label>
+        <input 
+          type="text" 
+          value={predictionData?.best_improvement_action || "No improvement needed"} 
+          readOnly 
+        />
+
+        <label>Personalized Tips</label>
+        {predictionData?.personalized_tips && predictionData.personalized_tips.length > 0 ? (
+          <ul className="personalized-tips-list">
+            {predictionData.personalized_tips.map((tip, index) => (
+              <li key={index}>{tip}</li>
+            ))}
+          </ul>
+        ) : (
+          <p>No personalized tips available</p>
+        )}
       </form>
     </section>
   );
