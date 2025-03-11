@@ -37,7 +37,12 @@ function Signup() {
 
     try {
       // Call API to sign up the user
-      await signupUser(userProfile);
+      const response = await signupUser(userProfile);
+      
+      // If the API returns a token, store it (optional)
+      if (response.token) {
+        localStorage.setItem("token", response.token);
+      }
       toast.success("Your account has been created successfully!");
 
       // Redirect to dashboard after 3 seconds

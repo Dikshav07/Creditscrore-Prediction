@@ -17,15 +17,13 @@ function Login() {
     e.preventDefault();
     try {
       const response = await loginUser({ email, password });
-      
       // Save token in local storage
       localStorage.setItem("token", response.token);
       toast.success("Login successful!");
-
       // Redirect after a short delay
       setTimeout(() => navigate("/dashboard"), 2000);
     } catch (error) {
-      toast.error(error.message || "Login failed! Please try again.");
+      toast.error(error.response?.data?.message || "Login failed! Please try again.");
     }
   };
 
@@ -33,7 +31,7 @@ function Login() {
     <div className="login_page">
       <ToastContainer />
       <div className="form-container">
-        <h2 className="title">Sign In</h2>
+        <h2 className="title">Login Your Account</h2>
         <form className="form" onSubmit={handleSubmit}>
           <div className="input-group">
             <label>Email</label>
@@ -70,9 +68,15 @@ function Login() {
         </div>
 
         <div className="social-icons">
-          <button className="icon"><FaGoogle size={24} /></button>
-          <button className="icon"><FaTwitter size={24} /></button>
-          <button className="icon"><FaGithub size={24} /></button>
+          <button className="icon">
+            <FaGoogle size={24} />
+          </button>
+          <button className="icon">
+            <FaTwitter size={24} />
+          </button>
+          <button className="icon">
+            <FaGithub size={24} />
+          </button>
         </div>
 
         <div className="signup">

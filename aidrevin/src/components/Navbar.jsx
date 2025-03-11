@@ -1,16 +1,25 @@
-// src/components/Navbar.jsx
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import "./Navbar.css";
 
 function Navbar({ toggleSidebar }) {
+  const navigate = useNavigate();
+  const isAuthenticated = !!localStorage.getItem("token");
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    navigate("/login");
+  };
+
   return (
     <header className="navbar">
       <div className="navbar__left">
-        <button className="navbar__toggle" onClick={toggleSidebar}>
-          <FaBars />
-        </button>
+        {isAuthenticated && (
+          <button className="navbar__toggle" onClick={toggleSidebar}>
+            <FaBars />
+          </button>
+        )}
         <div className="navbar__logo">
           <Link to="/">CreditBank</Link>
         </div>
@@ -23,8 +32,16 @@ function Navbar({ toggleSidebar }) {
       </nav>
 
       <div className="navbar__auth">
-        <Link to="/login">Login</Link>
-        <Link to="/signup">Signup</Link>
+        {!isAuthenticated ? (
+          <>
+            <Link to="/login">Login</Link>
+            <Link to="/signup">Signup</Link>
+          </>
+        ) : (
+          <button onClick={handleLogout} className="logout-btn">
+            Logout
+          </button>
+        )}
       </div>
     </header>
   );
