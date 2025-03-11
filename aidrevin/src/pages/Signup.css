@@ -1,18 +1,27 @@
-body {
+/* ========== Global Theme for Signup Page ==========
+   If you want a slightly different dark or even a lighter approach, 
+   you can adjust the background and text colors here. 
+*/
+html, body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  padding: 0;
+  height: 100%;
+  background: #1a1a1a; /* Keep or change to #121212 or a dark gradient */
+  font-family: "Poppins", sans-serif;
+  color: #f0f0f0;
 }
 
+/* ========== Navbar (if used on Signup) ========== */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
+  background-color: #000;
   padding: 15px 20px;
 }
 
 .navbar .logo {
-  color: white;
+  color: #fff;
   font-size: 24px;
   font-weight: bold;
 }
@@ -23,7 +32,7 @@ body {
 }
 
 .navbar .nav-links a {
-  color: white;
+  color: #fff;
   text-decoration: none;
   padding: 8px 16px;
   border-radius: 5px;
@@ -31,196 +40,118 @@ body {
 }
 
 .navbar .nav-links a:hover {
-  background-color: #575757;
+  background-color: #444;
 }
 
-.container {
-  display: flex;            /* Places image & text side by side */
-  align-items: flex-start;  /* Aligns both items at the top (left side) */
-  justify-content: flex-start; /* Push everything to the left */
-  gap: 40px;                /* Spacing between image & text */
-  margin: 50px;             /* Adds space around the container */
-  padding: 20px;
-  /* Remove max-width: if you don't want it centered or restricted */
+/* ========== Signup Page Container ========== */
+.signup_page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-.image {
-  width: 750px;    /* Increase or decrease for a bigger/smaller image */
-  flex-shrink: 0;  /* Prevents the image from shrinking on smaller screens */
+/* ========== Signup Form Container ========== */
+.form-container {
+  width: 400px;
+  padding: 2rem;
+  background-color: #2a2a2a;
+  color: #fff;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
 }
 
-.image img {
+.title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #00B45E; /* Brand green or a different accent if you want variety */
+  margin-bottom: 1rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
   width: 100%;
-  margin-top:50px;
-  margin-right:200px;
-  height: auto;
-  display: block;  /* Ensures no extra bottom gap */
 }
 
-.text {
-  flex: 1;        
-  font-size: 20px;
-  color: #333;
-  text-align: left;
-  }
-  p{
-      margin-top:100px;
-  }
+/* ========== Input Group ========== */
+.input-group {
+  width: 100%;
+}
 
-  html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      font-family: "Poppins", sans-serif;
-      background: #e6f7e6;
-    }
-    
-    .login_page {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
-    
-    .form-container {
-      width: 400px;
-      padding: 2rem;
-      background-color: #ffffff;
-      border-radius: 10px;
-      text-align: center;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-    }
-    
-    .title {
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: #006633;
-      margin-bottom: 1rem;
-    }
-    
-    .form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-      width: 100%;
-    }
-    
-    .input-group {
-      width: 100%;
-    }
-    
-    .input-group label {
-      display: block;
-      font-weight: 600;
-      font-size: 0.9rem;
-      color: #333;
-      margin-bottom: 5px;
-      text-align: center;
-    }
-    
-    .input-group input {
-      margin-left: -5px;
+.input-group label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 5px;
+  text-align: center;
+}
 
-      width: 100%;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      outline: none;
-      background-color: #f9f9f9;
-      padding: 12px;
-      font-size: 1rem;
-      color: #333;
-      text-align: center;
-    }
-    
-    .input-group input:focus {
-      border-color: #009933;
-    }
-    
-    .forgot {
-      text-align: center;
-      font-size: 0.85rem;
-      margin: 10px 0;
-    }
-    
-    .forgot a {
-      color: #009933;
-      text-decoration: none;
-    }
-    
-    .forgot a:hover {
-      text-decoration: underline;
-    }
-    
-    .sign {
-      width: 100%;
-      background: linear-gradient(to right, #00B45E, #007A4A);
-      padding: 12px;
-      text-align: center;
-      color: #fff;
-      border: none;
-      border-radius: 6px;
-      font-size: 1rem;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    
-    .sign:hover {
-      opacity: 0.9;
-    }
-    
-    .social-message {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 1.5rem 0 1rem;
-    }
-    
-    .line {
-      height: 1px;
-      width: 30%;
-      background-color: #ccc;
-    }
-    
-    .social-message .message {
-      padding: 0 10px;
-      font-size: 0.9rem;
-      color: #666;
-    }
-    
-    .social-icons {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-    }
-    
-    .social-icons .icon {
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 10px;
-    }
-    
-    .social-icons .icon svg {
-      width: 28px;
-      height: 28px;
-      fill: #007A4A;
-    }
-    
-    .signup {
-      margin-top: 15px;
-      font-size: 0.9rem;
-      color: #666;
-      text-align: center;
-    }
-    
-    .signup a {
-      color: #009933;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    
-    .signup a:hover {
-      text-decoration: underline;
-    }
-    
+.input-group input {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #555;
+  outline: none;
+  background-color: #333;
+  padding: 12px;
+  font-size: 1rem;
+  color: #fff;
+  text-align: center;
+  transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+  border-color: #00B45E; 
+}
+
+/* ========== Forgot Password or Terms (Optional) ========== */
+.forgot {
+  text-align: center;
+  font-size: 0.85rem;
+  margin: 10px 0;
+}
+
+.forgot a {
+  color: #00B45E;
+  text-decoration: none;
+}
+
+.forgot a:hover {
+  text-decoration: underline;
+}
+
+/* ========== Signup Button ========== */
+.sign {
+  width: 100%;
+  background: linear-gradient(to right, #00B45E, #007A4A);
+  padding: 12px;
+  text-align: center;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.sign:hover {
+  opacity: 0.9;
+}
+
+/* ========== Social Section (Optional) ========== */
+.social-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5rem 0 1rem;
+}
+
+.line {
+  height: 1px;
+ 
+}

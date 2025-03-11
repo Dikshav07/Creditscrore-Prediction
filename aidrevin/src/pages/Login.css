@@ -1,133 +1,198 @@
-/* src/pages/Login.css (example) */
+/* ========== Global Dark Theme for Login Page ========== */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #1a1a1a; /* Dark background */
+  font-family: "Poppins", sans-serif;
+  color: #f0f0f0;      /* Light text on dark bg */
+}
 
-/* Outer container to center the form vertically */
+/* ========== Navbar (if used on Login) ========== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000; /* Slightly darker than #333 */
+  padding: 15px 20px;
+}
+
+.navbar .logo {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar .nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+.navbar .nav-links a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.navbar .nav-links a:hover {
+  background-color: #444;
+}
+
+/* ========== Login Page Container ========== */
 .login_page {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 70vh; /* Adjust as needed */
-  background-color: var(--light-bg, #f9f9f9); /* or any background color */
+  min-height: 100vh;
 }
 
-/* The form "card" */
+/* ========== Login Form Container ========== */
 .form-container {
-  background: #fff; /* White background for a card-like effect */
-  border-radius: 8px;
+  width: 400px;
   padding: 2rem;
-  padding-right: 30px;
-  max-width: 400px; /* Fixed width for the card */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: center; /* Center headings, etc. */
+  background-color: #2a2a2a; /* Dark container */
+  color: #fff;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
 }
 
-/* Title styling */
 .title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #00B45E; /* Brand green accent */
   margin-bottom: 1rem;
-  font-size: 1.5rem;
-  color: var(--primary-color, #0F8666); /* Example: teal/green */
 }
 
-/* The form itself */
 .form {
   display: flex;
   flex-direction: column;
-  margin-top: 1rem;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
 }
 
-/* Group label + input together */
+/* ========== Input Group ========== */
 .input-group {
-  margin-bottom: 1rem;
-  text-align: left; /* Label & input alignment */
+  width: 100%;
 }
 
 .input-group label {
   display: block;
-  margin-bottom: 0.3rem;
-  font-weight: 500;
-  color: #333;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 5px;
+  text-align: center;
 }
 
 .input-group input {
   width: 100%;
-  padding: 0.6rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 6px;
+  border: 1px solid #555;
+  outline: none;
+  background-color: #333;
+  padding: 12px;
+  font-size: 1rem;
+  color: #fff;
+  text-align: center;
+  transition: border-color 0.3s;
 }
 
-/* Forgot Password link alignment */
+.input-group input:focus {
+  border-color: #00B45E; 
+}
+
+/* ========== Forgot Password ========== */
 .forgot {
-  text-align: right;
-  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 0.85rem;
+  margin: 10px 0;
 }
 
 .forgot a {
-  color: var(--primary-color, #0F8666);
+  color: #00B45E;
   text-decoration: none;
-  font-size: 0.9rem;
 }
 
-/* Sign In button */
+.forgot a:hover {
+  text-decoration: underline;
+}
+
+/* ========== Login Button ========== */
 .sign {
   width: 100%;
-  padding: 0.75rem;
-  background: var(--primary-color, #0F8666);
+  background: linear-gradient(to right, #00B45E, #007A4A);
+  padding: 12px;
+  text-align: center;
   color: #fff;
   border: none;
-  border-radius: 4px;
-  font-weight: 600;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
   cursor: pointer;
+  transition: opacity 0.3s ease;
 }
 
-/* Horizontal “or” lines with text in the middle */
+.sign:hover {
+  opacity: 0.9;
+}
+
+/* ========== Social Section (Optional) ========== */
 .social-message {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 1.5rem 0;
-  color: #666;
+  margin: 1.5rem 0 1rem;
 }
 
-.social-message .line {
-  flex: 1;
+.line {
   height: 1px;
-  background: #ccc;
+  width: 30%;
+  background-color: #555;
 }
 
 .social-message .message {
-  margin: 0 0.75rem;
+  padding: 0 10px;
   font-size: 0.9rem;
+  color: #aaa;
 }
 
-/* Social icons row */
 .social-icons {
   display: flex;
   justify-content: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
+  gap: 12px;
 }
 
-/* Icon buttons */
-.icon {
-  background: #f1f1f1;
+.social-icons .icon {
+  background: none;
   border: none;
-  border-radius: 50%;
-  padding: 0.6rem;
   cursor: pointer;
-  transition: background 0.3s;
+  padding: 10px;
 }
 
-.icon:hover {
-  background: #e6e6e6;
+.social-icons .icon svg {
+  width: 28px;
+  height: 28px;
+  fill: #00B45E;
 }
 
-/* Signup link at the bottom */
+/* ========== Extra (Signup Link on Login Page) ========== */
 .signup {
+  margin-top: 15px;
   font-size: 0.9rem;
-  color: #666;
+  color: #ccc;
+  text-align: center;
 }
 
 .signup a {
-  color: var(--primary-color, #0F8666);
+  color: #00B45E;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: bold;
+}
+
+.signup a:hover {
+  text-decoration: underline;
 }
