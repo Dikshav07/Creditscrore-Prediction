@@ -57,17 +57,20 @@ cd Creditscrore-Prediction
 
  ```
 **2. Backend Setup (Flask + ML)**
+<br>
 Make sure Python is installed.
 
-**a. Set up the backend server**
+**Set up the backend server**
 ```bash
 cd credit-score-backend-new
 pip install -r requirements.txt
 python app.py
 
  ```
+The Flask server will start (usually at http://localhost:5000).
 
 **3. Frontend Setup (React + Vite)**
+<br>
 Make sure Node.js is installed.
 ```bash
 cd ..
