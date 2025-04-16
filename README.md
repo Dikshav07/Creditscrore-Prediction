@@ -50,6 +50,7 @@ Creditscrore-Prediction/
 
  ```
 ## ⚙️ Setup Instructions
+- **1. clone the repo**
 ```bash
 git clone https://github.com/Dikshav07/Creditscrore-Prediction.git
 cd Creditscrore-Prediction
