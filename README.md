@@ -50,13 +50,44 @@ Creditscrore-Prediction/
 
  ```
 ## ⚙️ Setup Instructions
-- **1. clone the repo**
+**1. clone the repo**
 ```bash
 git clone https://github.com/Dikshav07/Creditscrore-Prediction.git
 cd Creditscrore-Prediction
 
  ```
-# Accuracy Metrics:
+**2. Backend Setup (Flask + ML)**
+Make sure Python is installed.
+
+**a. Set up the backend server**
+```bash
+cd credit-score-backend-new
+pip install -r requirements.txt
+python app.py
+
+ ```
+
+**3. Frontend Setup (React + Vite)**
+Make sure Node.js is installed.
+```bash
+cd ..
+cd src
+npm install
+npm run dev
+
+ ```
+The React app will run at: http://localhost:5173
+> ✅ Make sure both the frontend and backend servers are running simultaneously to access full functionality.
+---
+
+## 📊 Machine Learning Model
+- Type: Supervised Learning
+- Algorithm: Decision Tree Classifier
+- Libraries: Scikit-learn, Pandas
+- Trained on: Credit-related features like loan amount, account age, payment history, etc.
+
+
+## Accuracy Metrics:
 
 - Model Accuracy: 85%
 - R2 score = 0.99
