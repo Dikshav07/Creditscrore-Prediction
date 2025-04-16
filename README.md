@@ -36,19 +36,25 @@ A full-stack web application that empowers women to **track, analyze, and improv
 
 ```bash
 Creditscrore-Prediction/
-├── client/                  # Frontend - Vite + React + Tailwind CSS
-│   ├── public/
-│   └── src/
-├── server/                  # Backend - Flask + ML model
-│   ├── model/
-│   └── app.py
+├── aidrevin/                      # Additional frontend module (possibly old or experimental)
+├── credit-score-backend-new/     # Flask backend for credit score prediction
+├── mlBackend/                    # ML model & logic for prediction
+├── src/                          # Main React source files (components, pages, etc.)
+├── .gitignore
 ├── README.md
-└── requirements.txt
+├── eslint.config.js
+├── index.html
+├── package-lock.json
+├── package.json
+├── vite.config.js
 
+ ```
+## ⚙️ Setup Instructions
+```bash
+git clone https://github.com/Dikshav07/Creditscrore-Prediction.git
+cd Creditscrore-Prediction
 
-
-
-
+ ```
 # Accuracy Metrics:
 
 - Model Accuracy: 85%
